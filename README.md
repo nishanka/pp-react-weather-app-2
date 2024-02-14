@@ -5,6 +5,7 @@
 
 ## Project Details
 - ReactJS (This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).)
+- Fetch API (https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 - Open Weather Map API (https://openweathermap.org/api)
 
 ### Funcionalities
