@@ -12,14 +12,19 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getFormattedWeatherData(city, units);
-      setData(data);
+      try {
+        const data = await getFormattedWeatherData(city, units);
+        setData(data);
 
-      const threshold = units === 'metric' ? 20 : 60;
-      if (data.temp <= threshold) {
-        setBg('cold');
-      } else {
-        setBg('hot');
+        const threshold = units === 'metric' ? 18 : 64.4;
+        if (data.temp <= threshold) {
+          setBg('cold');
+        } else {
+          setBg('hot');
+        }
+        setError('');
+      } catch (err) {
+        setError('Invalid City Name');
       }
     };
     fetchData();
@@ -43,6 +48,7 @@ function App() {
       if (event.currentTarget.value.length > 0) {
         setCity(event.currentTarget.value);
         event.currentTarget.blur();
+        setError('');
       } else {
         setError('City is empty!');
       }
