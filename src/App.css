@@ -36,14 +36,10 @@ h3 {
   height: 100vh;
   overflow-y: auto;
   position: relative;
-  background: url('./assets/nature.jpg') no-repeat center center/cover fixed;
   color: #fff;
 }
 
-.app.normal {
-  background: url('./assets/nature.jpg') no-repeat center center/cover fixed;
-}
-
+.app,
 .app.hot {
   background: url('./assets/hot.jpg') no-repeat center center/cover fixed;
 }
